@@ -2,7 +2,7 @@
 Theme for Hugo static web pages generator.
 
 ## Configuration
-Comming soon.
+Coming soon.
 
 ## License
 MIT License
