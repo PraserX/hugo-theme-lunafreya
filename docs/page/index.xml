@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Lunafreya</title>
-    <link>https://praserx.github.io/hugo-theme-lunafreya/page/</link>
+    <link>https://praserx.github.io/hugo-theme-lunafreya/docs/page/</link>
     <description>Recent content in Pages on Lunafreya</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Praser</copyright>
     <lastBuildDate>Wed, 19 Apr 2017 21:47:52 +0200</lastBuildDate>
     
-	<atom:link href="https://praserx.github.io/hugo-theme-lunafreya/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://praserx.github.io/hugo-theme-lunafreya/docs/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://praserx.github.io/hugo-theme-lunafreya/page/about/</link>
+      <link>https://praserx.github.io/hugo-theme-lunafreya/docs/page/about/</link>
       <pubDate>Wed, 19 Apr 2017 21:47:52 +0200</pubDate>
       
-      <guid>https://praserx.github.io/hugo-theme-lunafreya/page/about/</guid>
+      <guid>https://praserx.github.io/hugo-theme-lunafreya/docs/page/about/</guid>
       <description>Lunafreya is theme which using J3A library for static web pages encryption. J3A library adding new features to static web page such as authentication, authorization and accounting. You can create multiple user accounts and roles. Improve your page with this.
 J3A is free for everyone. Just try it. Username is &amp;lsquo;user&amp;rsquo; and password is &amp;lsquo;user&amp;rsquo;. There is only one encrypted page named secret. There is also &amp;lsquo;Registered&amp;rsquo; role (user has this one).</description>
     </item>
     
     <item>
       <title>Secret page</title>
-      <link>https://praserx.github.io/hugo-theme-lunafreya/page/secret/</link>
+      <link>https://praserx.github.io/hugo-theme-lunafreya/docs/page/secret/</link>
       <pubDate>Wed, 19 Apr 2017 21:47:52 +0200</pubDate>
       
-      <guid>https://praserx.github.io/hugo-theme-lunafreya/page/secret/</guid>
+      <guid>https://praserx.github.io/hugo-theme-lunafreya/docs/page/secret/</guid>
       <description>As you can see, this page is only for registered users. Here, we&amp;rsquo;ve got only one user &amp;lsquo;user&amp;rsquo; with password &amp;lsquo;user&amp;rsquo; in role &amp;lsquo;Registered&amp;rsquo;, but you can define your own roles or users. Try it! Follow this link: J3A.</description>
     </item>
     
     <item>
       <title>Access denied</title>
-      <link>https://praserx.github.io/hugo-theme-lunafreya/page/denied/</link>
+      <link>https://praserx.github.io/hugo-theme-lunafreya/docs/page/denied/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://praserx.github.io/hugo-theme-lunafreya/page/denied/</guid>
+      <guid>https://praserx.github.io/hugo-theme-lunafreya/docs/page/denied/</guid>
       <description>Access to the page content was denied! You have to login to view page content.</description>
     </item>
     

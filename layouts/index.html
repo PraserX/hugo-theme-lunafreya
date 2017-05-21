@@ -1,0 +1,31 @@
+	{{ partial "header.html" . }}
+
+	<main role="main">
+		<article style="margin: 50px 0px;">
+			<div class="row">
+				<div class="col s4 offset-s4" style="text-align: center;">
+					<img class="author" src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4 offset-s4" style="text-align: center;">
+					<span><b>{{ .Site.Params.Author }}</b></span><br>
+					<span>{{ .Site.Params.Aboutme }}</span>
+				</div>
+			</div>
+		</article>
+		
+		{{ range (where .Data.Pages "Section" "post") }}
+		<article itemscope itemtype="http://schema.org/Blog">
+			<div class="row">
+				<div class="col s12">
+					<h2 class="entry-title" itemprop="headline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+					<span class="entry-meta"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span><br>
+					<span class="entry-description">{{ .Description }}</span>
+				</div>
+			</div>
+		</article>
+		{{ end }}
+	</main>
+
+	{{ partial "footer.html" . }}

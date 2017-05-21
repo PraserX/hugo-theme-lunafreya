@@ -1,6 +1,6 @@
 {
     "site-name": "Lunafreya demo page",
-    "uri-base": "https://praserx.github.io/hugo-theme-lunafreya/",
+    "uri-base": "https://praserx.github.io/hugo-theme-lunafreya/docs/",
     "uri-boot": "security/boot.script.html",
     "uri-acl": "security/acl.json",
     "uri-roles": "security/roles.json",

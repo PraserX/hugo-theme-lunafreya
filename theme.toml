@@ -1,0 +1,11 @@
+name = "Lunafreya"
+license = "MIT"
+licenselink = "https://github.com/PraserX/hugo-theme-lunafreya/blob/master/LICENSE"
+description = "Sipmle theme with J3A extension."
+tags = ["blog"]
+features = ["blog", "themes"]
+min_version = 0.13
+
+[author]
+    name = "Praser"
+    homepage = "https://praserx.github.io/"

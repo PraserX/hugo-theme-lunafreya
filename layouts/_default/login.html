@@ -1,0 +1,47 @@
+	{{ partial "header.html" . }}
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/Blog">
+			<div class="row" style="margin-top: 20px;">
+				<form id="login-form" class="col s6 offset-s3" action="">
+					<div class="row" id="login-failed" style="display: none; padding: 10px 15px; margin-bottom:15px; background-color: #f2dede; color: #000;">
+						<div class="col s12">
+							<p>Přihlášení se nezdařilo!</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="username" type="text" class="validate">
+							<label for="username">Username</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="password" type="password" class="validate">
+					  		<label for="password">Password</label>
+						</div>
+				  	</div>
+					<div class="row">
+						<div class="col s12">
+							<button id="login-button" type="submit" class="contentButton"><span>Login</span></button>
+						</div>
+					</div>
+				</form>
+			</div>	
+			<div class="row">
+				<div class="col s12">
+					<section itemprop="entry-text">
+						{{ .Content }}
+					</section>
+				</div>
+			</div>
+		</article>
+		
+		<!--  -->
+		<script type="text/javascript">
+			window.localStorage.setItem('loginPage', "true");
+		</script>
+		
+	</main>
+
+	{{ partial "footer.html" . }}

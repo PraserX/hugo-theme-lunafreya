@@ -1,0 +1,80 @@
+		</div>
+		
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						
+						<div class="hr"></div>
+						
+						<p>Copyright &copy; {{ .Site.Copyright | safeHTML }}</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript">
+			// Show/hide login/logout button
+			$(document).ready(function () {
+				if (J3A.Logged() == true) {
+					$("#link-login").hide();
+					$("#link-logout").show();
+				}
+			});
+			
+			//////////////////////////////////////////////////////////////////////////////////
+			// J3A config, init and post processing
+			//////////////////////////////////////////////////////////////////////////////////
+
+			// J3A config url
+			var configUrl = "{{ .Site.BaseURL }}config.json";    // localhost
+			
+			// JA3 stuff
+			j3a = new J3A(true);    // New J3A
+
+			// Run initialization
+			j3a.Init(configUrl).then(function () {
+				$(document).ready(function () {
+					// Run J3A page postprocessing
+					j3a.RunPostProcessing().then(function (result) {
+						// Now everything is done! Do something else here!
+					});
+				});
+			}).catch(function (error) {
+				console.log(error);
+			});
+			
+			//////////////////////////////////////////////////////////////////////////////////
+			// Click events
+			//////////////////////////////////////////////////////////////////////////////////
+
+			// Login button
+			$("#login-form").on("submit", function (e) {
+				e.preventDefault();
+				j3a.Login($("#username").val(), $("#password").val()).then(function (result) {
+					window.location.href = j3a.GetBaseUrl(); // Now redirect to main page!
+				}, function (err) {
+					console.log(err);
+					$("#login-failed").show();
+				});
+			});
+
+			// Logout button
+			$("#link-logout").click(function () {
+				j3a.PartialLogout();
+				window.location.href = j3a.GetBaseUrl();
+			});
+		</script>
+
+		{{ with .Site.GoogleAnalytics }}
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', '{{ . }}', 'auto');
+			ga('send', 'pageview');
+		</script>
+		{{ end }}
+	</body>
+</html>

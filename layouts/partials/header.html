@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+	<head>
+		<meta charset="utf-8">
+		{{ .Hugo.Generator }}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/materialize.min.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
+		<link rel="alternate" href="{{ .Site.BaseURL }}index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
+		
+		<title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="{{ .Site.BaseURL }}js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="{{ .Site.BaseURL }}js/materialize.min.js"></script>
+		<script type="text/javascript" src="{{ .Site.BaseURL }}js/j3a.min.js"></script>
+		
+		<!-- header -->
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col s6"><h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1></div>
+					<div class="col s6" style="text-align: right;">
+						<ul class="main-menu">
+							{{ $currentNode := . }}
+							{{ range .Site.Menus.main.ByWeight }}
+								{{ .Pre }}
+									<a href="{{ .URL }}">{{ .Name }}</a>
+								</li>
+							{{ end }}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<div class="container">
+			
