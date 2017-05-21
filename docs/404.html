@@ -1,0 +1,138 @@
+	<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="Hugo 0.20.2" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://praserx.github.io/hugo-theme-lunafreya/css/materialize.min.css">
+		<link rel="stylesheet" href="https://praserx.github.io/hugo-theme-lunafreya/css/custom.css">
+		<link rel="alternate" href="https://praserx.github.io/hugo-theme-lunafreya/index.xml" type="application/rss+xml" title="Lunafreya">
+		
+		<title>404 Page not found - Lunafreya</title>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="https://praserx.github.io/hugo-theme-lunafreya/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="https://praserx.github.io/hugo-theme-lunafreya/js/materialize.min.js"></script>
+		<script type="text/javascript" src="https://praserx.github.io/hugo-theme-lunafreya/js/j3a.min.js"></script>
+		
+		
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col s6"><h1 class="site-title"><a href="https://praserx.github.io/hugo-theme-lunafreya/">Lunafreya</a></h1></div>
+					<div class="col s6" style="text-align: right;">
+						<ul class="main-menu">
+							
+							
+								<li>
+									<a href="/hugo-theme-lunafreya/">Main</a>
+								</li>
+							
+								<li>
+									<a href="/hugo-theme-lunafreya/page/about/">About</a>
+								</li>
+							
+								<li>
+									<a href="/hugo-theme-lunafreya/page/secret/">Secret</a>
+								</li>
+							
+								<li id="link-login">
+									<a href="/hugo-theme-lunafreya/login/">Login</a>
+								</li>
+							
+								<li id="link-logout" style="display: none;">
+									<a href="#">Logout</a>
+								</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<div class="container">
+			
+
+
+	<main id="main">
+		<div class="row">
+			<div class="col s12">
+				<h2 id="title" class="entry-title" itemprop="headline">404 Page not found</h2>
+			</div>
+		</div>
+	</main>
+
+			</div>
+		
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						
+						<div class="hr"></div>
+						
+						<p>Copyright &copy; Praser</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript">
+			
+			$(document).ready(function () {
+				if (J3A.Logged() == true) {
+					$("#link-login").hide();
+					$("#link-logout").show();
+				}
+			});
+			
+			
+			
+			
+
+			
+			var configUrl = "https:\/\/praserx.github.io\/hugo-theme-lunafreya\/config.json";    
+			
+			
+			j3a = new J3A(true);    
+
+			
+			j3a.Init(configUrl).then(function () {
+				$(document).ready(function () {
+					
+					j3a.RunPostProcessing().then(function (result) {
+						
+					});
+				});
+			}).catch(function (error) {
+				console.log(error);
+			});
+			
+			
+			
+			
+
+			
+			$("#login-form").on("submit", function (e) {
+				e.preventDefault();
+				j3a.Login($("#username").val(), $("#password").val()).then(function (result) {
+					window.location.href = j3a.GetBaseUrl(); 
+				}, function (err) {
+					console.log(err);
+					$("#login-failed").show();
+				});
+			});
+
+			
+			$("#link-logout").click(function () {
+				j3a.PartialLogout();
+				window.location.href = j3a.GetBaseUrl();
+			});
+		</script>
+
+		
+	</body>
+</html>
