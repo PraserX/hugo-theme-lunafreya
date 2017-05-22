@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Lunafreya</title>
+    <link>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/</link>
+    <description>Recent content in Posts on Lunafreya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Praser</copyright>
+    <lastBuildDate>Sun, 21 May 2017 21:47:52 +0200</lastBuildDate>
+    
+	<atom:link href="https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Some Article</title>
+      <link>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/somearticle/</link>
+      <pubDate>Sun, 21 May 2017 21:47:52 +0200</pubDate>
+      
+      <guid>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/somearticle/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum tristique nunc id rutrum. Maecenas a augue diam. Etiam ac erat elementum, tempus eros vitae, feugiat arcu. Fusce volutpat pretium enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque ornare turpis quis tortor vestibulum, ac lacinia nisl feugiat. Suspendisse sodales condimentum felis ac semper. Aliquam fringilla dignissim molestie. Pellentesque id erat pellentesque, dapibus dui quis, aliquet elit.</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/welcome/</link>
+      <pubDate>Wed, 19 Apr 2017 21:47:52 +0200</pubDate>
+      
+      <guid>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/welcome/</guid>
+      <description>Read more in About page!</description>
+    </item>
+    
+  </channel>
+</rss>
