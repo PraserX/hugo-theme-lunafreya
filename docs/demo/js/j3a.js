@@ -1507,7 +1507,11 @@ Crypter.prototype.DecrypAesGcm = function (iv, tag, secret, key) {
 
     return new Promise(function (resolve, reject) {
         self.subtle.decrypt(alg, key, secretBufferd).then(function (plainBuffer) {
-            resolve(new TextDecoder().decode(plainBuffer));
+            try {
+                resolve(new TextDecoder().decode(plainBuffer));
+            } catch (error) {
+                resolve(self.ArrayBufferToString(plainBuffer));
+            }
         }).catch(function (error) {
             console.log("[CRYPTER] Exception: ");
             console.log(error);
@@ -1530,7 +1534,11 @@ Crypter.prototype.DecrypRsaOaep = function (secret, key) {
 
     return new Promise(function (resolve, reject) {
         self.subtle.decrypt(alg, key, secretBufferd).then(function (plainBuffer) {
-            resolve(new TextDecoder().decode(plainBuffer));
+            try {
+                resolve(new TextDecoder().decode(plainBuffer));
+            } catch (error) {
+                resolve(self.ArrayBufferToString(plainBuffer));
+            }
         }).catch(function (error) {
             console.log("[CRYPTER] Exception: ");
             console.log(error);
@@ -1548,7 +1556,16 @@ Crypter.prototype.Sha256 = function (plaintext) {
     var self = this;
 
     return new Promise(function (resolve, reject) {
-        var plaintextUtf8 = new TextEncoder().encode(plaintext);
+
+        var plaintextUtf8 = null;
+
+        try {
+            plaintextUtf8 = new TextEncoder().encode(plaintext);
+        } catch (error) {
+            plaintextUtf8 = self.StrToByteArray(plaintext);
+        }
+
+        //const plaintextUtf8 = new TextEncoder().encode(plaintext);
 
         self.subtle.digest('SHA-256', plaintextUtf8).then(function (hash) {
             resolve(hash);
@@ -1567,7 +1584,16 @@ Crypter.prototype.Sha512 = function (plaintext) {
     var self = this;
 
     return new Promise(function (resolve, reject) {
-        var plaintextUtf8 = new TextEncoder().encode(plaintext);
+
+        var plaintextUtf8 = null;
+
+        try {
+            plaintextUtf8 = new TextEncoder().encode(plaintext);
+        } catch (error) {
+            plaintextUtf8 = self.StrToByteArray(plaintext);
+        }
+
+        //const plaintextUtf8 = new TextEncoder().encode(plaintext);
 
         self.subtle.digest('SHA-512', plaintextUtf8).then(function (hash) {
             resolve(hash);
@@ -1622,7 +1648,15 @@ Crypter.prototype.Pbkdf2Key = function (password, salt, cipher) {
 Crypter.prototype.Sha256Key = function (password, ciphername) {
     var self = this;
 
-    var pwdUtf8 = new TextEncoder().encode(password);
+    var pwdUtf8 = "";
+
+    try {
+        pwdUtf8 = new TextEncoder().encode(password);
+    } catch (error) {
+        pwdUtf8 = self.StrToByteArray(password);
+    }
+
+    //const pwdUtf8 = new TextEncoder().encode(password);
     var alg = { name: ciphername };
 
     return new Promise(function (resolve, reject) {
@@ -1701,6 +1735,15 @@ Crypter.prototype.ArrayBufferToHexString = function (buffer) {
 
     // Join all the hex strings into one
     return hexCodes.join("").toLocaleUpperCase();
+};
+
+/**
+ * @description Provides conversion from ByteArray to Hex string
+ * @param {ByteArray} buffer Input ByteArray
+ * @returns {string} String
+ */
+Crypter.prototype.ArrayBufferToString = function (buffer) {
+    return String.fromCharCode.apply(null, new Uint8Array(buffer));
 };
 
 /**
