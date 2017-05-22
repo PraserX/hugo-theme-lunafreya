@@ -88,25 +88,19 @@
 
 		<script type="text/javascript">
 			
-			$(document).ready(function () {
-				if (J3A.Logged() == true) {
-					$("#link-login").hide();
-					$("#link-logout").show();
-				}
-			});
-			
 			
 			
 			
 
 			
 			var configUrl = "https:\/\/praserx.github.io\/hugo-theme-lunafreya\/demo\/config.json";    
+			var prefix = "luna";
 			
 			
-			j3a = new J3A(true);    
-
+			j3a = new J3A();
 			
-			j3a.Init(configUrl, false, "luna").then(function () {
+			
+			j3a.Init(configUrl, false, prefix).then(function () {
 				$(document).ready(function () {
 					
 					j3a.RunPostProcessing().then(function (result) {
@@ -115,6 +109,14 @@
 				});
 			}).catch(function (error) {
 				console.log(error);
+			});
+			
+			
+			$(document).ready(function () {
+				if (J3A.Logged(prefix) == true) {
+					$("#link-login").hide();
+					$("#link-logout").show();
+				}
 			});
 			
 			
