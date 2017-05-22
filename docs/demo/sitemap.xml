@@ -2,59 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/somearticle/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/post/somearticle/</loc>
     <lastmod>2017-05-21T21:47:52+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/page/about/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/page/about/</loc>
     <lastmod>2017-04-19T21:47:52+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/login/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/login/</loc>
     <lastmod>2017-04-19T21:47:52+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/page/secret/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/page/secret/</loc>
     <lastmod>2017-04-19T21:47:52+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/welcome/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/post/welcome/</loc>
     <lastmod>2017-04-19T21:47:52+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/page/denied/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/page/denied/</loc>
   </url>
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/categories/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/</loc>
-    <lastmod>2017-05-21T21:47:52+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/page/</loc>
-    <lastmod>2017-04-19T21:47:52+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/post/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/</loc>
     <lastmod>2017-05-21T21:47:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://praserx.github.io/hugo-theme-lunafreya/docs/demo/tags/</loc>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/page/</loc>
+    <lastmod>2017-04-19T21:47:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/post/</loc>
+    <lastmod>2017-05-21T21:47:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://praserx.github.io/hugo-theme-lunafreya/demo/tags/</loc>
     <priority>0</priority>
   </url>
   
