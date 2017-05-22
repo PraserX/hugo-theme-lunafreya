@@ -107,7 +107,7 @@
 			j3a = new J3A(true);    
 
 			
-			j3a.Init(configUrl, "luna").then(function () {
+			j3a.Init(configUrl, false, "luna").then(function () {
 				$(document).ready(function () {
 					
 					j3a.RunPostProcessing().then(function (result) {
